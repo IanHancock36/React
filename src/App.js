@@ -4,9 +4,12 @@ import Modal from "./components/Modal";
 import React from 'react'
 function App() {
   const subtitle = "this is the subtitle";
-  const[showModal,setShowModal] = React.useState(true)
+  const[showModal,setShowModal] = React.useState(false)
   const handleClose = () =>{
     setShowModal(false)
+  }
+  const handleOpen = () =>{
+    setShowModal(true)
   }
   return (
     <div className="App">
@@ -26,6 +29,7 @@ function App() {
             <h3>hey</h3>
           </Modal>
           </>}
+          <button onClick={handleOpen}>Show Modal</button>
     </div>
   );
 }
